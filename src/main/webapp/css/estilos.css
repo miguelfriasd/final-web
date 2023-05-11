@@ -1,0 +1,80 @@
+#about {
+    font-size: 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url("../assets/img/castillo.jpg") fixed center center;
+    background-size: cover;
+    padding: 60px 0;
+}
+.btnTienda{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 75%, #000 100%), url("../assets/img/ladrillos.png");
+}
+#texto{
+    font-family:'Bilbo Swash Caps' ;
+}
+#img1 {    
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("https://wallpaperaccess.com/full/124791.png") fixed center center;
+    background-size: cover;
+    padding: 3rem 0;
+   
+}
+#img2 {
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("https://wallpaperaccess.com/full/3271103.jpg") fixed center center;
+    background-size: cover;
+    padding: 30px 0;
+}
+
+#img3 {
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("https://wallpapercave.com/wp/wp10245487.jpg") fixed center center;
+    background-size: cover;
+    padding: 30px 0;
+}
+#mainNav{
+    background: transparent;
+}
+#img4 {
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("https://wallpaperaccess.com/full/2002841.jpg") fixed center center;
+    background-size: cover;
+    padding: 30px 0;
+}
+
+
+.masthead {
+    font-family: 'Bilbo Swash Caps', cursive;
+}
+
+#projects{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgb(0, 0, 0,1)), url("https://img.freepik.com/foto-gratis/viejo-fondo-negro-textura-grunge-papel-tapiz-oscuro-pizarra-pizarra-pared-habitacion_1258-28312.jpg?w=1380&t=st=1680134533~exp=1680135133~hmac=484a7b2151cd67da098e5eac0f1777acd3b7962a9cb6cd1ed8e162f5a5247fe6");
+}
+
+.box{
+    width: 250px;
+    height: 370px;
+    background-color: #4a4a4a;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.form-login{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+
+
+
+
