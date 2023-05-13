@@ -6,6 +6,7 @@
 package com.tierramedia.servlet;
 
 import com.tierramedia.controlador.ControladorUsuario;
+import com.tierramedia.modelo.Administrador;
 import com.tierramedia.modelo.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -60,7 +61,11 @@ public class LoginServlet extends HttpServlet {
         try {
             ControladorUsuario controladorUsuario = new ControladorUsuario();
             Usuario usuario = controladorUsuario.getUsuario(correo, password);
-            if (usuario != null) {
+            if (usuario != null && usuario instanceof Administrador) {
+                request.getSession().setAttribute("usuario", usuario);
+                response.sendRedirect("productos.jsp");
+            }
+            else if (usuario != null && !(usuario instanceof Administrador)) {
                 request.getSession().setAttribute("usuario", usuario);
                 response.sendRedirect("tienda.jsp");
             }

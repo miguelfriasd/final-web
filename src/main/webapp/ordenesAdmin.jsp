@@ -15,13 +15,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     Usuario usuario = (Usuario) request.getSession().getAttribute("usuario");
-	List<Orden> ordenes = null;
-	if (usuario != null && usuario instanceof Administrador) {
-	    ControladorOrden controladorOrden  = new ControladorOrden();
-            ordenes = controladorOrden.getOrdenes();
-	}else{
-            response.sendRedirect("tienda.jsp");
-	}
+    List<Orden> ordenes = null;
+    if (usuario != null && usuario instanceof Administrador) {
+        ControladorOrden controladorOrden  = new ControladorOrden();
+        ordenes = controladorOrden.getOrdenes();
+    }else{
+        response.sendRedirect("index.jsp");
+    }
 %>
 <!DOCTYPE html>
 <html>

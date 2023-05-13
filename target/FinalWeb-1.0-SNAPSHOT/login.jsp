@@ -80,13 +80,13 @@
             <form action="login-usuario" method="post">
                 <!-- Email input -->
                <div class="form-outline mb-4">
-                  <input type="email" id="form2Example1" class="form-control" name="correo"
+                  <input require="" type="email" id="form2Example1" class="form-control" name="correo"
                   <label class="form-label" for="form2Example1">Correo Electrónico</label>
                 </div>                
               
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="form2Example2" class="form-control" name="contra"/>
+                  <input require="" type="password" id="form2Example2" class="form-control" name="contra"/>
                   <label class="form-label" for="form2Example2">Contraseña</label>
                 </div>
               

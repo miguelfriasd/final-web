@@ -5,6 +5,8 @@
  */
 package com.tierramedia.pruebas;
 
+import com.sun.org.apache.bcel.internal.generic.AALOAD;
+import com.tierramedia.controlador.ControladorProducto;
 import com.tierramedia.modelo.Administrador;
 import com.tierramedia.modelo.Producto;
 import com.tierramedia.modelo.Usuario;
@@ -21,8 +23,9 @@ public class PruebasMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Administrador admin = new Administrador("admin@admin.com", "1234");
-        UnitOfWork.getInstance().getAdministradoresRepository().agregar(admin);
+        Producto producto = new Producto(Long.valueOf("5"), "xd", "elfica.png", 12);
+        ControladorProducto controladorProducto= new ControladorProducto();
+        controladorProducto.actualizarProducto(producto);
     }
     
 }

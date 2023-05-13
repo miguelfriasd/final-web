@@ -22,7 +22,7 @@
                                 }else{
                                     if (usuario instanceof Administrador) {
                             %>
-                                    <li class="nav-item"><a class="nav-link" href="tienda.jsp">Agregar Productos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="productos.jsp">Productos</a></li>
                                     <li class="nav-item"><a class="nav-link" href="ordenesAdmin.jsp">Ordenes</a></li>
                                     <li clnombreass="nav-item"><a class="nav-link" href="usuario-logout">Cerrar Sesión</a></li>
                             <%                

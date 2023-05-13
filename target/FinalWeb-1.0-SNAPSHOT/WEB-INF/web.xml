@@ -28,6 +28,14 @@
         <servlet-name>CheckoutCarritoServlet</servlet-name>
         <servlet-class>com.tierramedia.servlet.CheckoutCarritoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>agregarProductoServlet</servlet-name>
+        <servlet-class>com.tierramedia.servlet.agregarProductoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EliminarProductoServlet</servlet-name>
+        <servlet-class>com.tierramedia.servlet.EliminarProductoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CantidadIncDecServlet</servlet-name>
         <url-pattern>/carrito-incdec</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>CheckoutCarritoServlet</servlet-name>
         <url-pattern>/carrito-check-out</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>agregarProductoServlet</servlet-name>
+        <url-pattern>/agregar-producto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarProductoServlet</servlet-name>
+        <url-pattern>/eliminar-producto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

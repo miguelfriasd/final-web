@@ -32,4 +32,13 @@ public class ProductosRepository extends RepositoryBase<Producto>{
         return producto;  
     }
     
+    public void eliminarProducto(int id){
+        entityManager.getTransaction().begin();
+        TypedQuery<Producto> query = entityManager.createNamedQuery("eliminarProducto", Producto.class);
+        query.setParameter("id", id);
+        query.executeUpdate();
+        entityManager.getTransaction().commit();
+    } 
+    
+    
 }

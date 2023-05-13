@@ -31,6 +31,10 @@ import java.util.Objects;
     @NamedQuery(
             name = "selectProducto",
             query = "SELECT u FROM Producto u WHERE u.id = :id"
+    ),
+    @NamedQuery(
+            name = "eliminarProducto",
+            query = "DELETE FROM Producto u WHERE u.id = :id"
     )
 })
 public class Producto implements Serializable{
@@ -48,23 +52,22 @@ public class Producto implements Serializable{
     
     @Column(name = "precio", nullable = false)
     private double precio; 
-    
-    @Column(name = "stock", nullable = false)
-    private int stock;
 
-    public Producto(Long id, String nombre, String img, double precio, int stock) {
+    public Producto(Long id) {
+        this.id = id;
+    }
+    
+    public Producto(Long id, String nombre, String img, double precio) {
         this.id = id;
         this.nombre = nombre;
         this.img = img;
         this.precio = precio;
-        this.stock = stock;
     }
 
-    public Producto(String nombre, String img, double precio, int stock) {
+    public Producto(String nombre, String img, double precio) {
         this.nombre = nombre;
         this.img = img;
         this.precio = precio;
-        this.stock = stock;
     }
 
     public Producto() {
@@ -100,14 +103,6 @@ public class Producto implements Serializable{
 
     public void setPrecio(double precio) {
         this.precio = precio;
-    }
-
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
     }
 
     @Override

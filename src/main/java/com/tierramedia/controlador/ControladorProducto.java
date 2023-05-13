@@ -43,6 +43,32 @@ public class ControladorProducto {
         return htmlcode;
     }
     
+    public String getProductosAdmin(){
+        String htmlcode = "";
+        for (Producto producto : UnitOfWork.getInstance().getProductosRepository().getAllProductos()) {
+            htmlcode+=  "                    <div class=\"col mb-5 cheve\">\n" +
+                        "                        <div class=\"card h-100\">\n" +
+                        "                            <!-- Product image-->\n" +
+                        "                            <img class=\"card-img-top\" src=assets/img/" + producto.getImg() + " alt=\"...\" />\n" +
+                        "                            <!-- Product details-->\n" +
+                        "                            <div class=\"card-body p-4\">\n" +
+                        "                                <div class=\"text-center\">\n" +
+                        "                                    <!-- Product name-->\n" +
+                        "                                    <h5 class=\"fw-bolder\">" + producto.getNombre() + "</h5>\n" +
+                        "                                    <!-- Product price-->\n" +
+                        "                                    " + producto.getPrecio() + "\n" +
+                        "                                </div>\n" +
+                        "                            </div>\n" +
+                        "                            <!-- Product actions-->\n" +
+                        "                            <div class=\"card-footer p-4 pt-0 border-top-0 btnTienda\">\n" +
+                        "                                <div class=\"text-center\"><a class=\"btn btn-outline-light mt-auto\" href=\"editar-producto?id="+producto.getId()+"\">Editar</a><a class=\"btn btn-outline-light mt-auto\" href=\"eliminar-producto?id="+producto.getId()+"\">Eliminar</a></div>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "                    </div>";
+        }
+        return htmlcode;
+    }    
+    
     public Producto getProducto(int id){
         return UnitOfWork.getInstance().getProductosRepository().getProducto(id);
     }
@@ -78,5 +104,17 @@ public class ControladorProducto {
             System.out.println(e.getMessage());
         }
         return productosCarrito;
+    }
+    
+    public void agregarProducto(Producto producto){
+        UnitOfWork.getInstance().getProductosRepository().agregar(producto);
+    }
+    
+    public void eliminarProducto(int idProducto){
+        UnitOfWork.getInstance().getProductosRepository().eliminarProducto(idProducto);
+    }
+    
+    public void actualizarProducto(Producto producto){
+        UnitOfWork.getInstance().getProductosRepository().actualizar(producto);
     }
 }
