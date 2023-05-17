@@ -44,7 +44,7 @@ public class Producto implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;    
     
-    @Column(name = "nombre ", nullable = false, length = 255)
+    @Column(name = "nombre ", nullable = false, length = 50)
     private String nombre; 
     
     @Column(name = "img_producto", nullable = false, length = 255)

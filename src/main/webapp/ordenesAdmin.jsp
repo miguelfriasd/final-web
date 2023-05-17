@@ -53,7 +53,6 @@
 					<th scope="col">Cantidad</th>
 					<th scope="col">Precio</th>
                                         <th scope="col">Correo Usuario</th>
-					<th scope="col">Cancelar</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -72,7 +71,6 @@
 						<td><%=o.getCantidad()%></td>
 						<td><%=o.getCantidad() * p.getPrecio() %></td>
                                                 <td><%=o.getCorreoUsuario()%></td>
-						<td><a class="btn btn-sm btn-danger" href="cancel-order?id=<%=o.getId()%>">Cancelar Orden</a></td>
 					</tr>
 				<%}
 			}
@@ -80,6 +78,6 @@
 			
 			</tbody>
 		</table>
-	</div>
+	</div>                    
     </body>
 </html>

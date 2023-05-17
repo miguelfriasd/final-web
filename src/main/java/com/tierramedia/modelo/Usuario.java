@@ -44,9 +44,6 @@ public class Usuario implements Serializable{
     @Column(name = "id_usuario", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "nombre", unique = true, nullable = true, length = 50)
-    private String username;
     
     @Column(name = "correo", unique = true, nullable = false, length = 50)
     private String correo;    
@@ -76,14 +73,6 @@ public class Usuario implements Serializable{
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {

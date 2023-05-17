@@ -32,46 +32,13 @@
         <script src="https://unpkg.com/scrollreveal"></script>
     </head>
     <body>
-        <!-- Navigation-->
-<!--         <nav class="navbar navbar-expand-lg  fixed-top row justify-content-between"  id="mainNav" >
-            
-            <div class="container px-4 px-lg-5">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                    <a class="navbar-brand" href="#">
-                    <img src="assets/img/iconoTM.png" alt="Logo" width="150x" height="40" class="d-inline-block align-text-top">
-                    </a>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto " >
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
-                        <button class="btn btn-dark" type="submit">Buscar</button>
-                      </form>
-                      <span>----</span>
-                    <form class="d-flex">
-                        <button class="btn btn-danger" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Carrito
-                            <span class="badge bg-black text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
-                   
-                  
-                </div>
-            </div>
-        </nav> -->
-
         <%@include file="/includes/navbar.jsp"%>
         
         <!-- Header-->
         <header class="bg-danger  py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <img src="assets/img/TierraMedia.png" alt="">
+                    <img src="assets/img/NuevoUsuario.png" alt="">
                 </div>
             </div>
         </header>
@@ -80,26 +47,24 @@
             <form  action="registro-usuario" method="post">
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <input type="email" id="form2Example1" class="form-control" name="correo" />
+                    <input type="email" id="form2Example1" class="form-control" name="correo" maxlength="50" minlength="6" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"/>
                   <label class="form-label" for="form2Example1">Correo Eletrónico</label>
                 </div>
               
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="form2Example2" class="form-control" name="contra"/>
+                  <input type="password" id="form2Example2" class="form-control" name="contra" maxlength="20" minlength="4"/>
                   <label class="form-label" for="form2Example2">Contraseña</label>
                 </div>
               
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">Regisrarse </button>
+                <button type="submit" class="btn btn-black btn-block mb-4">Regisrarse </button>
               
             </form>
         </div>
 
         <!-- Footer-->
-        <footer class="py-5 bg-white">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy;  Cerveza Tierra Media 2023</p></div>
-        </footer>
+        <%@include file="/includes/footer.jsp"%>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

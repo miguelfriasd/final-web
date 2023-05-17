@@ -30,7 +30,7 @@ public class ControladorProducto {
                         "                                    <!-- Product name-->\n" +
                         "                                    <h5 class=\"fw-bolder\">" + producto.getNombre() + "</h5>\n" +
                         "                                    <!-- Product price-->\n" +
-                        "                                    " + producto.getPrecio() + "\n" +
+                        "                                    " + "$" + String.format("%.02f", producto.getPrecio()) + " MXN \n" +
                         "                                </div>\n" +
                         "                            </div>\n" +
                         "                            <!-- Product actions-->\n" +
@@ -56,7 +56,7 @@ public class ControladorProducto {
                         "                                    <!-- Product name-->\n" +
                         "                                    <h5 class=\"fw-bolder\">" + producto.getNombre() + "</h5>\n" +
                         "                                    <!-- Product price-->\n" +
-                        "                                    " + producto.getPrecio() + "\n" +
+                        "                                    " + "$" + String.format("%.02f", producto.getPrecio()) + " MXN \n" +
                         "                                </div>\n" +
                         "                            </div>\n" +
                         "                            <!-- Product actions-->\n" +

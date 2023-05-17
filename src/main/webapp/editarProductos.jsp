@@ -37,27 +37,31 @@
     </head>
     <body>
         <%@include file="/includes/navbar.jsp"%>
-        <%
-
-            
-        %>
+        <header class="bg-danger  py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <img src="assets/img/editarProducto.png" alt="">
+                </div>
+            </div>
+        </header>
         <div class="form-login">
             <form action="editar-producto-final" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="${producto.getId()}" />
                 <div class="form-group mb-4">
                     <label for="nombre">Nombre del producto:</label>
-                    <input require="" type="text" class="form-control" name="nombre" value="${producto.getNombre()}">
+                    <input require="" type="text" class="form-control" required="" maxlength="50" name="nombre" value="${producto.getNombre()}">
                 </div>
                 <div class="form-group mb-4">
                     <label for="precio">Precio:</label>
-                    <input type="number" class="form-control" name="precio" value="${producto.getPrecio()}">
+                    <input type="text" class="form-control" required="" maxlength="6" pattern="^(?!-)\d+(\.\d+)?$" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"name="precio" value="${producto.getPrecio()}">
                 </div>
                 <div class="form-group mb-4">
                     <label for="imagen">Imagen:</label>
-                    <input type="file" class="form-control-file" name="imagen">
+                    <input type="file" required="" class="form-control-file" name="imagen">
                 </div>
-                <button type="submit" class="btn btn-primary">Editar producto</button>
+                <button type="submit" class="btn btn-black">Editar producto</button>
             </form>
         </div>
+        <%@include file="/includes/footer.jsp"%>             
     </body>
 </html>

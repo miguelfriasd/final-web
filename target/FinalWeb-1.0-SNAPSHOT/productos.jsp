@@ -46,7 +46,7 @@
         </header>
         
         <section>
-            <a class="btn btn-primary mb-3 mt-3 ms-3" href="agregarProductos.jsp" role="button">Agregar Productos</a>
+            <a class="btn btn-black mb-3 mt-3 ms-3" href="agregarProductos.jsp" role="button">Agregar Productos</a>
         </section>
         <!-- Section-->
         <section class="py-5">
@@ -54,7 +54,7 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <%= controladorProducto.getProductosAdmin()%>    
                 </div>                   
-        </section>
+        </section>              
         <!-- Footer-->
         <%@include file="/includes/footer.jsp"%>
         <!-- Bootstrap core JS-->

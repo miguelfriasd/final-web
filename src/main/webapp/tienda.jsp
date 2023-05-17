@@ -12,6 +12,9 @@
 <%
     ControladorProducto controladorProducto = new ControladorProducto();
     Usuario usuario = (Usuario)request.getSession().getAttribute("usuario");
+    if (usuario instanceof Administrador) {
+        response.sendRedirect("productos.jsp");
+    }
     ArrayList<Articulo> carrito = (ArrayList<Articulo>) session.getAttribute("carrito");    
 %>    
 
@@ -50,7 +53,7 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <%= controladorProducto.getProductos()%>    
                 </div>                   
-        </section>
+        </section>                
         <!-- Footer-->
         <%@include file="/includes/footer.jsp"%>
         <!-- Bootstrap core JS-->

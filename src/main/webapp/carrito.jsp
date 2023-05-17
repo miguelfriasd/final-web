@@ -46,14 +46,12 @@
 	<%@include file="/includes/navbar.jsp"%>
 
 	<div class="container my-3">
-		<div class="d-flex py-3"><h3>Precio total: $ ${total} </h3> <a class="mx-3 btn btn-primary" href="carrito-check-out">Comprar</a></div>
+		<div class="d-flex py-3"><h3>Precio total: $ ${total} </h3> <a class="mx-3 btn btn-black" href="carrito-check-out">Comprar</a></div>
 		<table class="table table-light">
 			<thead>
 				<tr>
 					<th scope="col">Nombre</th>
 					<th scope="col">Precio</th>
-					<th scope="col">Comprar ahora</th>
-					<th scope="col">Cancelar</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -73,7 +71,6 @@
 								<input type="text" name="quantity" class="form-control"  value="<%=a.getCantidad()%>" readonly> 
 								<a class="btn btn-sm btn-decre" href="carrito-incdec?accion=dec&id=<%=p.getId()%>"><i class="fas fa-minus-square"></i></a>
 							</div>
-							<button type="submit" class="btn btn-primary btn-sm">Comprar</button>
 						</form>
 					</td>
 					<td><a href="carrito-remover?id=<%=p.getId() %>" class="btn btn-sm btn-danger">Remover</a></td>
@@ -83,6 +80,6 @@
 				}}%>
 			</tbody>
 		</table>
-	</div>
+	</div>                      
     </body>
 </html>

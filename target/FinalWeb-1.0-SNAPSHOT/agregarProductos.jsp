@@ -31,22 +31,30 @@
     </head>
     <body>
         <%@include file="/includes/navbar.jsp"%>
+        <header class="bg-danger  py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <img src="assets/img/nuevoProducto.png" alt="">
+                </div>
+            </div>
+        </header>        
         <div class="form-login">
             <form action="agregar-producto" method="post" enctype="multipart/form-data">
                 <div class="form-group mb-4">
                     <label for="nombre">Nombre del producto:</label>
-                    <input require="" type="text" class="form-control" name="nombre" placeholder="Ingrese el nombre del producto">
+                    <input require="" type="text" class="form-control" name="nombre" required="" maxlength="50" placeholder="Ingrese el nombre del producto">
                 </div>
                 <div class="form-group mb-4">
                     <label for="precio">Precio:</label>
-                    <input type="number" class="form-control" name="precio" placeholder="Ingrese el precio del producto">
+                    <input type="text" class="form-control" name="precio" placeholder="Ingrese el precio del producto" pattern="^(?!-)\d+(\.\d+)?$" required="" maxlength="6" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                 </div>
                 <div class="form-group mb-4">
                     <label for="imagen">Imagen:</label>
-                    <input type="file" class="form-control-file" name="imagen">
+                    <input type="file" required="" class="form-control-file" name="imagen">
                 </div>
-                <button type="submit" class="btn btn-primary">Agregar producto</button>
+                <button type="submit" class="btn btn-black">Agregar producto</button>
             </form>
         </div>
+        <%@include file="/includes/footer.jsp"%>
     </body>
 </html>
